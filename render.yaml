@@ -1,7 +1,7 @@
 services:
   - type: web
     name: news-app-backend
-    env: python
+    env: python3
     plan: free
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn wsgi:app"
+    startCommand: "python3 -m gunicorn wsgi:app"
